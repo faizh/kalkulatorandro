@@ -3,26 +3,25 @@ package com.example.ddddd.cal;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.TextView;
 import android.widget.Button;
 import android.widget.EditText;
 
 public class MainActivity extends AppCompatActivity {
-    private TextView txthasil;
     private Button btntambah,btnkurang, btnkali, btnbagi;
-    private EditText edtbil1, edtbil2;
+    private EditText edtbil1, edtbil2, edthasil;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        txthasil= (TextView) findViewById(R.id.txt_hasil);
+
         btntambah = (Button) findViewById(R.id.btn_tambah);
         btnkurang = (Button) findViewById(R.id.btn_kurang);
         btnbagi = (Button) findViewById(R.id.btn_bagi);
         btnkali = (Button) findViewById(R.id.btn_kali);
         edtbil1 = (EditText) findViewById(R.id.edt_bil1);
         edtbil2 = (EditText) findViewById(R.id.edt_bil2);
+        edthasil = (EditText) findViewById(R.id.edt_hasil);
 
         btntambah.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -34,7 +33,8 @@ public class MainActivity extends AppCompatActivity {
                 double bilangan2 = Double.parseDouble(bil2);
                 double hasil = bilangan1 + bilangan2;
 
-                txthasil.setText("Hasil = " + hasil);
+
+                edthasil.setHint("" + hasil);
             }
         });
 
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity {
                 double bilangan2 = Double.parseDouble(bil2);
                 double hasil = bilangan1 - bilangan2;
 
-                txthasil.setText("Hasil = "+hasil);
+                edthasil.setHint("" + hasil);
             }
         });
 
@@ -62,7 +62,7 @@ public class MainActivity extends AppCompatActivity {
                 double bilangan2 = Double.parseDouble(bil2);
                 double hasil = bilangan1 * bilangan2;
 
-                txthasil.setText("Hasil = "+hasil);
+                edthasil.setHint("" + hasil);
             }
         });
 
@@ -76,7 +76,7 @@ public class MainActivity extends AppCompatActivity {
                 double bilangan2 = Double.parseDouble(bil2);
                 double hasil = bilangan1 / bilangan2;
 
-                txthasil.setText("Hasil = "+hasil);
+                edthasil.setHint("" + hasil);
             }
         });
     }
