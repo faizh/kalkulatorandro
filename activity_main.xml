@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ddddd.cal.MainActivity"
+    android:orientation="vertical">
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Kalkulator Sederhana"
+       android:textSize="20dp"
+       android:layout_marginLeft="5dp"
+       android:layout_marginTop="8dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Bilangan 1"
+        android:textSize="16dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginLeft="5dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_bil1"
+        android:hint="0"
+        android:layout_marginTop="65dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:inputType="numberDecimal"/>
+
+   <TextView
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:text="Bilangan 2"
+       android:layout_marginTop="110dp"
+       android:layout_marginLeft="5dp"
+
+       android:textSize="16dp"/>
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/edt_bil2"
+        android:hint="0"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginRight="5dp"
+        android:inputType="numberDecimal"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        android:textSize="20dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="5dp"
+        android:id="@+id/btn_tambah"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        android:textSize="20dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginLeft="98dp"
+        android:id="@+id/btn_kurang"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        android:textSize="20dp"
+        android:layout_marginLeft="190dp"
+        android:layout_marginTop="180dp"
+        android:id="@+id/btn_kali"/>
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        android:textSize="20dp"
+        android:layout_marginLeft="285dp"
+        android:layout_marginTop="180dp"
+        android:id="@+id/btn_bagi"/>
+
+
+
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="240dp"
+        android:layout_marginLeft="5dp"
+        android:layout_marginRight="5dp"
+        android:id="@+id/edt_hasil"
+        android:hint="0"
+        android:enabled="false" />
+
+</RelativeLayout>
